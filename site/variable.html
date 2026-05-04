@@ -1,39 +1,8 @@
 <!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Вариативная часть — PolyQuest</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header class="header">
-    <div class="container">
-      <a class="logo" href="index.html">PolyQuest</a>
-      <nav>
-        <ul class="menu">
-          <li><a href="about.html">О проекте</a></li>
-          <li><a href="participants.html">Участники</a></li>
-          <li><a href="journal.html">Журнал</a></li>
-          <li><a href="resources.html">Ресурсы</a></li>
-          <li><a href="variable.html">Вариативная часть</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main class="container">
-    <article class="content">
-      <h1>Вариативная часть</h1>
-      <p><strong>Тема:</strong> «Собственный HTTP-сервер на Python».</p>
-      <p>Сделано:</p>
-      <ul>
-        <li>исследованы основы HTTP и TCP-сокетов;</li>
-        <li>реализован сервер в <code>src/main.py</code>;</li>
-        <li>подготовлен туториал в <code>docs/variable_http_server_guide.md</code>.</li>
-      </ul>
-      <p><a href="index.html">← На главную</a></p>
-    </article>
-  </main>
-  <footer class="footer"><div class="container">PolyQuest</div></footer>
-</body>
-</html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Вариативная часть — PolyQuest</title><link rel="stylesheet" href="css/style.css"></head>
+<body><header class="header"><div class="container nav-wrap"><a class="logo" href="index.html"><span>PQ</span> PolyQuest</a><nav aria-label="Основная навигация"><ul class="menu"><li><a href="index.html">Главная</a></li><li><a href="about.html">О проекте</a></li><li><a href="participants.html">Участники</a></li><li><a href="journal.html">Журнал</a></li><li><a href="resources.html">Ресурсы</a></li><li><a class="active" href="variable.html">Вариативная часть</a></li></ul></nav></div></header>
+<main class="container page"><section class="page-title"><p class="eyebrow">Индивидуальное задание</p><h1>Вариативная часть: презентационный HTTP-сервер</h1><p class="lead">Тема: «Собственный HTTP-сервер на Python без веб-фреймворков». Сервер реализован через TCP-сокеты и оформлен как небольшое интерактивное веб-приложение.</p></section>
+<section class="section two-column"><article class="content accent-panel"><h2>Что сделано</h2><ul class="check-list"><li>Добавлена современная HTML-страница с CSS-оформлением в стиле PolyQuest.</li><li>Реализованы маршруты <code>/</code>, <code>/about</code>, <code>/routes</code>, <code>/api/status</code>, <code>/hello?name=...</code> и <code>/health</code>.</li><li>Появились JSON API, динамическая страница приветствия, красивая 404-страница и обработка метода 405.</li><li>Улучшены заголовки HTTP-ответа, логирование запросов и структура кода.</li></ul></article><article class="content"><h2>Как запустить</h2><p>Из корня проекта выполните команду:</p><pre><code>python src/main.py</code></pre><p>После запуска откройте в браузере:</p><pre><code>http://127.0.0.1:8080/</code></pre></article></section>
+<section class="section"><div class="section-head"><p class="eyebrow">Доступные адреса</p><h2>Маршруты сервера</h2></div><div class="cards"><article class="card"><h3>/</h3><p>Главная презентационная страница сервера.</p></article><article class="card"><h3>/about</h3><p>Описание архитектуры: TCP, HTTP и маршрутизация.</p></article><article class="card"><h3>/routes</h3><p>Список всех доступных маршрутов.</p></article><article class="card"><h3>/api/status</h3><p>JSON-ответ со статусом сервера, временем и списком маршрутов.</p></article><article class="card"><h3>/hello?name=Георгий</h3><p>Пример динамического ответа на основе query-параметра.</p></article></div></section>
+<section class="section content"><h2>Документация</h2><p>Подробное описание архитектуры, пошаговое создание сервера, примеры HTTP-запросов и команды проверки находятся в файле <code>docs/variable_http_server_guide.md</code>.</p></section></main><footer class="footer"><div class="container footer-grid"><span>Вариативная часть PolyQuest</span><span>Python sockets • HTTP/1.1</span></div></footer></body></html>
