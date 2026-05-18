@@ -159,7 +159,7 @@ h2 {
   border:1px solid var(--border);
   box-shadow:none}
 
-.content,.card,.resource-card,.post-card,.hero-shot,.media-card {
+.content,.card,.resource-card,.post-card,.hero-shot,.media-card,.interview-card {
   background:var(--surface);
   border:1px solid var(--border);
   border-radius:24px;
@@ -325,6 +325,47 @@ h2 {
   display:block;
   object-fit:cover}
 
+.interview-intro {
+  align-items:stretch}
+
+.interview-list {
+  display:grid;
+  gap:22px}
+
+.interview-card {
+  position:relative;
+  overflow:hidden}
+
+.interview-card:before {
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:5px;
+  background:linear-gradient(180deg,var(--accent),var(--accent2))}
+
+.question-number {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:46px;
+  height:34px;
+  margin-bottom:14px;
+  border-radius:999px;
+  background:rgba(37,213,255,.14);
+  color:var(--green);
+  font-weight:900;
+  letter-spacing:.08em}
+
+.interview-card blockquote {
+  margin:18px 0;
+  padding:18px 22px;
+  border-left:4px solid var(--green);
+  border-radius:16px;
+  background:rgba(255,255,255,.07);
+  color:#fff;
+  font-size:1.18rem;
+  font-weight:800}
+
 .resource-card ul {
   padding-left:20px}
 
@@ -430,7 +471,7 @@ h2 {
   padding:7px 9px;
   font-size:.88rem}
 
-.content,.card,.resource-card,.hero-shot,.media-card {
+.content,.card,.resource-card,.hero-shot,.media-card,.interview-card {
   padding:18px;
   border-radius:18px}
 
